@@ -1,16 +1,43 @@
-# navi_dog_flutter
+NaviDog
 
-A new Flutter project.
+NaviDog은 시각장애인을 위한 안전하고 효율적인 내비게이션을 제공하는 혁신적인 Flutter 앱입니다.  AI와 내비게이션 기술을 활용하여 시각장애인분들이 도보상에서 겪는 어려움을 해결하고자 합니다.
 
-## Getting Started
+프로젝트 동기
 
-This project is a starting point for a Flutter application.
+우리 팀은 고등학교 동아리에서 AI를 공부하면서 시각장애인이 도보 이동 시 겪는 어려움을 다룬 기사를 보고, 이들에게 도움이 되는 AI 기반 앱을 개발하기로 결심했습니다.
 
-A few resources to get you started if this is your first Flutter project:
+주요 기능
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. 안전한 이동
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+	•	장애물 인식: YOLO v8 모델을 사용하여 실시간으로 신호등, 횡단보도, 볼라드 등 장애물을 인식합니다.
+	•	횡단보도 정보 제공: 대각선 횡단보도 신호 정보를 제공합니다.
+	•	TTS 경고: 시각장애인에게 잠재적 위험 요소를 음성으로 경고합니다.
+
+2. 도보 내비게이션
+
+	•	TMAP API 및 Geolocation API: 사용자에게 정확한 방향을 안내합니다.
+	•	음성 명령 인식: 음성 명령을 STT로 인식하고 ChatGPT API를 통해 처리합니다.
+
+3. 독립성과 접근성
+
+	•	사용자 친화적: 간단한 조작법과 다양한 TTS 음성을 제공하여 어린이, 노인, 디지털 기기에 익숙하지 않은 사람도 쉽게 사용할 수 있습니다.
+	•	자립성 지원: 독립적으로 이동하고 사회 활동에 참여할 수 있도록 지원합니다.
+
+활용 데이터
+
+	•	인도보행 영상 데이터: 장애물 라벨링 및 인식을 위해 사용됩니다.
+	•	AI Hub 데이터 세트
+
+NaviDog 사용 방법
+
+	1.	앱 시작: 기기에서 NaviDog을 실행합니다.
+	2.	음성 명령: 화면을 1초 이상 눌러 음성 인식을 활성화합니다.
+	3.	내비게이션: 목적지를 말하면 NaviDog이 안전하게 안내합니다.
+
+
+현재 기능 구현 된 것
+
+1. yolov8 장애물 인식 (앱 - 서버연동)
+2. ChatGPT를 활용한 출발지, 목적지 분류 (앱내)
+3. 네비게이션 구현 (앱내)
